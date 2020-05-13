@@ -32,8 +32,9 @@ strong {
   font-weight: 700; }
 
 a {
-  color: #00aaef;
-  text-decoration: none; }
+  color: #0075ff;
+  text-decoration: none;
+  font-weight: bold; }
 
 textarea {
   overflow: hidden; }
@@ -52,30 +53,35 @@ h3 {
   line-height: 1.14; }
   .header__nav {
     position: absolute;
-    bottom: 25px;
+    bottom: 50px;
     left: 0;
     right: 0; }
   .header__top {
-    position: relative;
-    top: 35px;
-    margin: 0 120px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    position: relative;
+    top: 35px;
+    margin: 0 120px;
     color: white; }
   .header__link {
+    font-size: 12px;
+    letter-spacing: 2px;
     color: white;
     text-decoration: none;
-    -webkit-transition: color 2s;
-    transition: color 2s;
-    text-transform: uppercase; }
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+    text-transform: uppercase;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    .header__link-text {
+      border-bottom: 1px white solid;
+      padding-bottom: 8px; }
     .header__link:hover {
-      color: #0075ff; }
-  .header__action {
-    text-decoration: underline; }
+      color: #9fadc2; }
   .header__title {
     position: relative;
     margin-top: 330px;
@@ -88,6 +94,9 @@ h3 {
     border-radius: 2px;
     background-color: #fff; }
   .header__title-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     position: absolute;
     margin-top: 16px;
     width: 328px;
@@ -96,9 +105,6 @@ h3 {
     font-weight: bold;
     font-size: 60px;
     line-height: 60px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     letter-spacing: -1.5px;
     color: white; }
 
@@ -111,15 +117,17 @@ h3 {
   height: 18px; }
 
 @media screen and (max-width: 960px) {
-  .header .header__top {
+  .header__top {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
-  .header .header__action {
+  .header__action {
     display: none; }
   .header .phone__logo {
     display: block; }
-  .header .header__phone {
-    display: none; } }
+  .header__phone {
+    display: none; }
+  .header__title {
+    margin-left: 40px; } }
 
 .nav {
   color: black;
@@ -137,14 +145,15 @@ h3 {
     margin: 0 22.5px;
     border-radius: 8px;
     font-size: 12px;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    white-space: nowrap; }
     .nav__item_active {
       background-color: rgba(0, 117, 255, 0.1); }
   .nav__link {
     color: white;
     text-decoration: none;
-    -webkit-transition: color 2s;
-    transition: color 2s; }
+    -webkit-transition: color 1s;
+    transition: color 1s; }
     .nav__link--mobile {
       font-size: 22px;
       line-height: 22px; }
@@ -169,7 +178,7 @@ h3 {
   background-position: center; }
 
 .section {
-  padding: 160px calc(50% - 610px);
+  padding: 160px calc(50% - 550px);
   position: relative;
   background-color: #fff; }
   .section__heading {
@@ -177,8 +186,6 @@ h3 {
     right: 0;
     top: -0.5em;
     margin: auto; }
-  .section__content {
-    width: 100%; }
 
 @media screen and (max-width: 1440px) {
   .section {
@@ -204,6 +211,10 @@ h3 {
     font-size: 48px;
     line-height: 48px;
     letter-spacing: -1.5px; }
+    .info__heading-small {
+      font-size: 24px;
+      line-height: 30px;
+      color: #0075ff; }
     .info__heading a {
       text-decoration: none; }
   .info__text {
@@ -260,15 +271,15 @@ h3 {
     -o-object-position: center;
        object-position: center;
     border-radius: 8px; }
-  .photos__wide__left .photos__img:first-child {
+  .photos__wide-left .photos__img:first-child {
     width: calc(67% - 10px); }
-  .photos__wide__left .photos__img:last-child {
+  .photos__wide-left .photos__img:last-child {
     width: calc(33% - 10px); }
-  .photos__wide__right {
+  .photos__wide-right {
     /* stylelint-disable-next-line no-descending-specificity*/ }
-    .photos__wide__right .photos__img:first-child {
+    .photos__wide-right .photos__img:first-child {
       width: calc(33% - 10px); }
-    .photos__wide__right .photos__img:last-child {
+    .photos__wide-right .photos__img:last-child {
       width: calc(67% - 10px); }
 
 .gallery__caption {
@@ -282,23 +293,25 @@ h3 {
 
 .button {
   display: block;
+  padding: 19px 62px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
   font-size: 16px;
   line-height: 1;
   color: #fff;
-  font-weight: bold;
   background-color: #0075ff;
   border: 2px #0075ff solid;
   border-radius: 8px;
-  cursor: pointer;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  padding: 19px 62px;
-  text-transform: uppercase;
   -webkit-box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
-          box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46); }
+          box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
   .button:hover {
-    -webkit-filter: drop-shadow(23px 0 6px rgba(0, 117, 255, 0.46));
-            filter: drop-shadow(23px 0 6px rgba(0, 117, 255, 0.46)); }
+    -webkit-filter: drop-shadow(10px 0 6px rgba(0, 117, 255, 0.46));
+            filter: drop-shadow(10px 0 6px rgba(0, 117, 255, 0.46)); }
+  .button:focus {
+    outline: none; }
 
 .consultation {
   display: -webkit-box;
@@ -419,19 +432,20 @@ h3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 16px;
-    width: 380px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .contact__form {
-    width: 480px; }
-  .contact__link {
-    color: black; }
-  .contact h5 {
+            justify-content: space-between;
+    font-size: 16px;
+    width: 380px; }
+  .contact__heading {
     margin: 0;
     display: inline-block;
     color: #9fadc2; }
+  .contact__form {
+    width: 480px; }
+  .contact__link, .contact__details {
+    font-weight: normal;
+    color: #3e3e3e; }
   .contact__text-wrapper {
     margin-right: 100px; }
     .contact__text-wrapper:last-child {
@@ -459,7 +473,7 @@ h3 {
     bottom: 40px;
     left: calc(50% - 57.5px); }
 
-.mobile-menu {
+.mobile__menu {
   display: block;
   position: absolute;
   list-style: none;
@@ -479,10 +493,10 @@ h3 {
           transform: translateZ(0);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
-  .mobile-menu-ticker {
+  .mobile__menu-ticker {
     display: none; }
 
-.btn-menu {
+.btn__menu {
   color: #fff;
   display: none;
   padding: 5px;
@@ -498,7 +512,7 @@ h3 {
           transform: translateZ(0);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
-  .btn-menu span {
+  .btn__menu span {
     display: block;
     height: 3px;
     background-color: #fff;
@@ -507,29 +521,29 @@ h3 {
     transition: all 0.1s linear 0.23s;
     position: relative;
     border-radius: 3px; }
-  .btn-menu span.first {
+  .btn__menu span.first {
     margin-top: 0; }
 
-.mobile-menu-ticker:checked ~ .mobile-menu {
+.mobile__menu-ticker:checked ~ .mobile__menu {
   right: 0; }
 
-.mobile-menu-ticker:checked ~ .btn-menu span.first {
+.mobile__menu-ticker:checked ~ .btn__menu span.btn__menu-first {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   top: 8px; }
 
-.mobile-menu-ticker:checked ~ .btn-menu span.second {
+.mobile__menu-ticker:checked ~ .btn__menu span.btn__menu-second {
   opacity: 0; }
 
-.mobile-menu-ticker:checked ~ .btn-menu span.third {
+.mobile__menu-ticker:checked ~ .btn__menu span.btn__menu-third {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   top: -8px; }
 
-.mobile__nav {
+.mobile__menu-nav {
   margin-top: 40px; }
 
-.mobile__link {
+.mobile__menu-link {
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
@@ -538,18 +552,28 @@ h3 {
   letter-spacing: 2px;
   text-transform: uppercase; }
 
-.mobile__logo {
+.mobile__menu-logo {
   margin: 24px auto; }
 
-.mobile__phone {
+.mobile__menu-phone {
   margin-top: 35px; }
 
-.mobile__action {
+.mobile__menu-action {
   margin-top: 35px;
   text-decoration: underline; }
 
 @media screen and (max-width: 960px) {
-  .btn-menu {
+  .btn__menu {
     display: block; } }
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; }
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; }
 
 /*# sourceMappingURL=main.css.map */
