@@ -36,9 +36,6 @@ a {
   text-decoration: none;
   font-weight: bold; }
 
-textarea {
-  overflow: hidden; }
-
 h3 {
   margin: 0;
   padding: 0; }
@@ -55,7 +52,7 @@ h3 {
   font-weight: medium;
   line-height: 1.14; }
   .header__nav {
-    position: absolute;
+    margin: 100px 40px 40px;
     bottom: 50px;
     left: 0;
     right: 0; }
@@ -68,8 +65,16 @@ h3 {
             justify-content: space-between;
     position: relative;
     top: 35px;
-    margin: 0 120px;
+    margin: 0 60px;
     color: white; }
+  .header__logo {
+    width: 115px;
+    height: 76px;
+    background-image: url("../images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -60px; }
   .header__link {
     font-size: 12px;
     letter-spacing: 2px;
@@ -80,11 +85,11 @@ h3 {
     text-transform: uppercase;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
-    .header__link-text {
-      border-bottom: 1px white solid;
-      padding-bottom: 8px; }
-    .header__link:hover {
-      color: #9fadc2; }
+  .header__link-text {
+    border-bottom: 1px white solid;
+    padding-bottom: 8px; }
+  .header:hover {
+    color: #9fadc2; }
   .header__title {
     position: relative;
     margin-top: 250px;
@@ -109,28 +114,18 @@ h3 {
     letter-spacing: -1.5px;
     color: white; }
 
-.phone__logo {
-  position: absolute;
-  top: 45px;
-  left: 30px;
-  display: none;
-  width: 18px;
-  height: 18px; }
-
 @media screen and (max-width: 960px) {
   .header__top {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
   .header__action {
     display: none; }
-  .header .phone__logo {
-    display: block; }
   .header__phone {
     display: none; }
   .header__title {
     margin-left: 20px; } }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 960px) and (max-width: 350px) {
   .header__title {
     margin-left: 10px; }
     .header__title-text {
@@ -144,9 +139,9 @@ h3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   .nav__item {
     padding: 10px 30px;
     margin: 0 22.5px;
@@ -165,24 +160,15 @@ h3 {
       font-size: 22px;
       line-height: 22px; }
     .nav__link:hover {
-      color: #0075ff; }
-
-.nav__item > a:hover {
-  color: #9fadc2;
-  -webkit-transition: 0.3s;
-  transition: 0.3s; }
-
-@media screen and (max-width: 1024px) {
-  .nav__item {
-    display: none; } }
-
-.logo {
-  width: 115px;
-  height: 76px;
-  background-image: url("../images/logo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center; }
+      color: #9fadc2;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+  @media screen and (max-width: 1240px) {
+    .nav__item {
+      margin: 0; } }
+  @media screen and (max-width: 960px) {
+    .nav__item {
+      display: none; } }
 
 .section {
   padding: 160px calc(50% - 500px);
@@ -193,16 +179,14 @@ h3 {
     right: 0;
     top: -0.5em;
     margin: auto; }
-
-@media screen and (max-width: 1440px) {
-  .section {
-    padding-left: 40px;
-    padding-right: 40px; } }
-
-@media screen and (max-width: 960px) {
-  .section {
-    padding-left: 40px;
-    padding-right: 40px; } }
+  @media screen and (max-width: 1440px) {
+    .section {
+      padding-left: 40px;
+      padding-right: 40px; } }
+  @media screen and (max-width: 960px) {
+    .section {
+      padding-left: 40px;
+      padding-right: 40px; } }
 
 .info {
   display: -webkit-box;
@@ -229,21 +213,20 @@ h3 {
     color: #00aaef; }
   .info__text {
     max-width: 500px; }
-    .info__text > :first-child {
+    .info__text:first-child {
       margin-top: 0; }
-  .info > :last-child {
+  .info:last-child {
     margin-bottom: 0; }
-
-@media screen and (max-width: 960px) {
-  .info {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 90%; }
-    .info__heading {
-      margin-bottom: 15px;
-      font-size: 30px; } }
+  @media screen and (max-width: 960px) {
+    .info {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 90%; }
+      .info__heading {
+        margin-bottom: 15px;
+        font-size: 30px; } }
 
 .heading {
   font-size: 48px;
@@ -302,11 +285,25 @@ h3 {
 .gallery__link:hover {
   color: #00aaef; }
 
-.gallery__button,
-.gallery .button {
+.gallery__button {
+  display: block;
   margin: 44px auto 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 188px;
+  padding: 18px 62px;
+  cursor: pointer;
+  border: 2px #0075ff solid;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
+          box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
   color: #0075ff;
-  background-color: #fff; }
+  background-color: #fff;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s; }
+  .gallery__button:hover {
+    color: #fff;
+    background-color: #0075ff; }
 
 .button {
   display: block;
@@ -346,24 +343,22 @@ h3 {
     margin-bottom: 16px; }
   .consultation__form {
     width: 413px; }
-
-@media screen and (max-width: 960px) {
-  .consultation {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .consultation__text, .consultation__form {
+  @media screen and (max-width: 960px) {
+    .consultation {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .consultation__text, .consultation__form {
+        text-align: center;
+        width: 350px; } }
+  @media screen and (max-width: 350px) {
+    .consultation__text {
       text-align: center;
-      width: 350px; } }
-
-@media screen and (max-width: 960px) and (max-width: 350px) {
-  .consultation__text {
-    text-align: center;
-    width: 300px; } }
+      width: 300px; } }
 
 .form {
   display: -webkit-box;
@@ -383,15 +378,11 @@ h3 {
     .form__input {
       max-width: 350px; }
     .form__button {
-      width: 350px; }
-    .form .form {
-      width: 340px; } }
+      width: 350px; } }
   @media screen and (max-width: 350px) {
     .form__input {
       max-width: 300px; }
     .form__button {
-      width: 300px; }
-    .form .form {
       width: 300px; } }
 
 .input {
@@ -416,7 +407,7 @@ h3 {
     color: #b9c1ce; }
   .input::placeholder {
     color: #b9c1ce; }
-  .input__textareas {
+  .input--textareas {
     height: 160px; }
 
 .person {
@@ -472,6 +463,7 @@ h3 {
     width: 380px; }
   .contact__heading {
     margin: 0;
+    font-size: 14px;
     display: inline-block;
     color: #9fadc2; }
   .contact__form {
@@ -494,8 +486,8 @@ h3 {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-    .contact__text {
-      width: 350px; } }
+      .contact__text {
+        width: 350px; } }
   @media screen and (max-width: 350px) {
     .contact__text {
       width: 300px; }
@@ -513,9 +505,15 @@ h3 {
   .footer__logo {
     position: absolute;
     bottom: 40px;
-    left: calc(50% - 57.5px); }
+    left: calc(50% - 57.5px);
+    width: 115px;
+    height: 76px;
+    background-image: url("../images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
 
-.mobile__menu {
+.mobile-menu__list {
   display: block;
   position: absolute;
   list-style: none;
@@ -535,10 +533,8 @@ h3 {
           transform: translateZ(0);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
-  .mobile__menu-ticker {
-    display: none; }
 
-.btn__menu {
+.mobile-menu__btn {
   color: #fff;
   display: none;
   padding: 5px;
@@ -554,38 +550,27 @@ h3 {
           transform: translateZ(0);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
-  .btn__menu span {
-    display: block;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px 0 0;
-    -webkit-transition: all 0.1s linear 0.23s;
-    transition: all 0.1s linear 0.23s;
-    position: relative;
-    border-radius: 3px; }
-  .btn__menu span.first {
-    margin-top: 0; }
 
-.mobile__menu-ticker:checked ~ .mobile__menu {
+.mobile-menu__rect1, .mobile-menu__rect2, .mobile-menu__rect3 {
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0 0;
+  -webkit-transition: all 0.1s linear 0.23s;
+  transition: all 0.1s linear 0.23s;
+  position: relative;
+  border-radius: 3px; }
+
+.mobile-menu__ticker {
+  display: none; }
+
+.mobile-menu__ticker:checked ~ .mobile-menu__list {
   right: 0; }
 
-.mobile__menu-ticker:checked ~ .btn__menu span.btn__menu-first {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  top: 8px; }
-
-.mobile__menu-ticker:checked ~ .btn__menu span.btn__menu-second {
-  opacity: 0; }
-
-.mobile__menu-ticker:checked ~ .btn__menu span.btn__menu-third {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  top: -8px; }
-
-.mobile__menu-nav {
+.mobile-menu__item {
   margin-top: 40px; }
 
-.mobile__menu-link {
+.mobile-menu__link {
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
@@ -594,18 +579,34 @@ h3 {
   letter-spacing: 2px;
   text-transform: uppercase; }
 
-.mobile__menu-logo {
+.mobile-menu__logo {
+  width: 115px;
+  height: 76px;
+  background-image: url("../images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   margin: 24px auto; }
 
-.mobile__menu-phone {
+.mobile-menu__phone {
   margin-top: 35px; }
 
-.mobile__menu-action {
+.mobile-menu__action {
   margin-top: 35px;
   text-decoration: underline; }
 
+.mobile-menu__phone-pic {
+  position: absolute;
+  top: 45px;
+  left: 30px;
+  display: none;
+  width: 18px;
+  height: 18px; }
+
 @media screen and (max-width: 960px) {
-  .btn__menu {
+  .mobile-menu__btn {
+    display: block; }
+  .mobile-menu__phone-pic {
     display: block; } }
 
 html {
