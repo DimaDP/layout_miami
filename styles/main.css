@@ -48,6 +48,9 @@ h3 {
   background-image: url("../images/header.jpg");
   background-size: cover;
   background-position: center;
+  padding: 56px calc(50% - 600px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   font-weight: medium;
   line-height: 1.14; }
@@ -84,10 +87,9 @@ h3 {
       color: #9fadc2; }
   .header__title {
     position: relative;
-    margin-top: 330px;
-    margin-left: 120px; }
+    margin-top: 250px;
+    margin-left: 60px; }
   .header__title-line {
-    position: absolute;
     left: 2px;
     width: 35px;
     height: 3px;
@@ -97,7 +99,6 @@ h3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: absolute;
     margin-top: 16px;
     width: 328px;
     height: 121px;
@@ -127,7 +128,7 @@ h3 {
   .header__phone {
     display: none; }
   .header__title {
-    margin-left: 40px; } }
+    margin-left: 20px; } }
 
 .nav {
   color: black;
@@ -165,7 +166,7 @@ h3 {
   -webkit-transition: 0.3s;
   transition: 0.3s; }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   .nav__item {
     display: none; } }
 
@@ -232,9 +233,11 @@ h3 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    width: 80%; }
     .info__heading {
-      margin-bottom: 15px; } }
+      margin-bottom: 15px;
+      font-size: 30px; } }
 
 .heading {
   font-size: 48px;
@@ -348,7 +351,8 @@ h3 {
         -ms-flex-align: center;
             align-items: center; }
     .consultation__text, .consultation__form {
-      text-align: center; } }
+      text-align: center;
+      width: 350px; } }
 
 .form {
   display: -webkit-box;
@@ -364,13 +368,19 @@ h3 {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     width: 413px; }
+  @media screen and (max-width: 960px) {
+    .form__input {
+      max-width: 350px; }
+    .form__button {
+      width: 350px; }
+    .form .form {
+      width: 340px; } }
 
 .input {
   font-size: 14px;
   font-weight: 500;
   text-align: left;
   color: #393939;
-  width: 413px;
   height: 48px;
   padding: 17px;
   background-color: #f7f8ff;
@@ -465,7 +475,9 @@ h3 {
               flex-direction: column;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; } }
+              align-items: center; }
+    .contact__text {
+      width: 350px; } }
 
 .footer {
   height: 360px;
