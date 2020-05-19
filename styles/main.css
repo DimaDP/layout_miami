@@ -130,6 +130,12 @@ h3 {
   .header__title {
     margin-left: 20px; } }
 
+@media screen and (max-width: 350px) {
+  .header__title {
+    margin-left: 10px; }
+    .header__title-text {
+      font-size: 50px; } }
+
 .nav {
   color: black;
   text-transform: uppercase;
@@ -234,7 +240,7 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 80%; }
+    width: 90%; }
     .info__heading {
       margin-bottom: 15px;
       font-size: 30px; } }
@@ -354,6 +360,11 @@ h3 {
       text-align: center;
       width: 350px; } }
 
+@media screen and (max-width: 960px) and (max-width: 350px) {
+  .consultation__text {
+    text-align: center;
+    width: 300px; } }
+
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -375,6 +386,13 @@ h3 {
       width: 350px; }
     .form .form {
       width: 340px; } }
+  @media screen and (max-width: 350px) {
+    .form__input {
+      max-width: 300px; }
+    .form__button {
+      width: 300px; }
+    .form .form {
+      width: 300px; } }
 
 .input {
   font-size: 14px;
@@ -478,6 +496,11 @@ h3 {
               align-items: center; }
     .contact__text {
       width: 350px; } }
+  @media screen and (max-width: 350px) {
+    .contact__text {
+      width: 300px; }
+    .contact__text-wrapper {
+      margin-right: 50px; } }
 
 .footer {
   height: 360px;
