@@ -85,10 +85,10 @@ h3 {
     text-transform: uppercase;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
-  .header__link-text {
+  .header__link--text {
     border-bottom: 1px white solid;
     padding-bottom: 8px; }
-  .header:hover {
+  .header__link:hover {
     color: #9fadc2; }
   .header__title {
     position: relative;
